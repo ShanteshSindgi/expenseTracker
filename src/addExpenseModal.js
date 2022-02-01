@@ -147,7 +147,7 @@ export const AddExpenseModel = (props) => {
           {radioValue=="1"?
           debitedArray.map((e)=>{
             return <option value={e.value}>{e.name}</option>
-          }):debitedArray.map((e)=>{
+          }):creditedArray.map((e)=>{
             return <option value={e.value}>{e.name}</option>})
           }
            {/* <option value="Other">Kuta udavla</option>
