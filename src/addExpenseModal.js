@@ -15,7 +15,38 @@ export const AddExpenseModel = (props) => {
   const [validation, setValidation] = useState(true);
   const [category, setCategory] = useState(0);
   const [comments, setComments] = useState("");
+  
+  const debitedArray=[
+    {value:"Food",
+    name:"Food"},
+    {value:"Shopping",
+    name:"Shopping"},
+    {value:"Paid to Friend",
+    name:"Friend la dilo"},
+    {value:"Money Lost",
+    name:"Haravle Paise"},
+    {value:"Investment",
+    name:"Investment Vroo"},
+    {value:"Other",
+    name:"Other"},
+    
+  ]
 
+  const creditedArray=[
+    {value:"Salary",
+    name:"Salary"},
+    {value:"Received from friend",
+    name:"Friend ni dila"},
+    {value:"Found on road",
+    name:"Rastyavr sapadle"},
+    {value:"Investment profit",
+    name:"Investment vroo"},
+    {value:"Bonus",
+    name:"Bonus Vroo"},
+    {value:"Other",
+    name:"Other"},
+    
+  ]
   const radios = [
     { name: "Paishe Udavlo", value: "1" },
     { name: "Paishe Ale", value: "2" },
@@ -111,12 +142,20 @@ export const AddExpenseModel = (props) => {
             setCategory(e.target.value);
           }}
         >
-          <option value="Other">Kuta udavla</option>
+
+          {radioValue=="1"?
+          debitedArray.map((e)=>{
+            <option value={e.value}>{e.name}</option>
+          }):debitedArray.map((e)=>{
+            <option value={e.value}>{e.name}</option>})
+          }
+           {/* <option value="Other">Kuta udavla</option>
           <option value="Food">Food</option>
           <option value="Shopping">Shopping</option>
           <option value="Paid to Friend">Friend la dilo</option>
           <option value="Money Lost">Haravle Paise</option>
-          <option value="Other">Other</option>
+          <option value="Investment">Investment Vroo</option>
+          <option value="Other">Other</option>  */}
         </Form.Select>
         <br></br>
         <FloatingLabel
