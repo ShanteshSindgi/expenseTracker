@@ -12,14 +12,13 @@ export const Login = () => {
   
 
   const userLogin = () => {
-    console.log(email, password);
+    console.log(email, password,process.env.LOGIN_URL);
     axios
       .post(process.env.LOGIN_URL || "http://localhost:3200/user/login", {
         email: email,
         password: password,
       })
       .then((e) => {
-        console.log("e", e.status);
         if (e.status == 200) {
             if(e && e.data && e.data.token)
             {
