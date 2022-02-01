@@ -142,6 +142,7 @@ export const AddExpenseModel = (props) => {
             setCategory(e.target.value);
           }}
         >
+         <option value="Other">{radioValue=="1"?"Kuta udavla":"Kutna ale paishe"}</option>
 
           {radioValue=="1"?
           debitedArray.map((e)=>{
