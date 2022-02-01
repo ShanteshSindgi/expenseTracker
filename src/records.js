@@ -61,7 +61,7 @@ export const Records = () => {
       .get(
         process.env.GET_EXPENSE_URL
           ? process.env.GET_EXPENSE_URL + query
-          : `http://localhost:3200/user/getExpense${query}`,
+          : `https://expense-tracker77.herokuapp.com/user/getExpense${query}`,
         {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),

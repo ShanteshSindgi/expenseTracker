@@ -46,7 +46,7 @@ export const AddExpenseModel = (props) => {
     };
     axios
       .post(
-        process.env.ADD_EXPENSE_URL || "http://localhost:3200/user/addexpense",
+        process.env.ADD_EXPENSE_URL || "https://expense-tracker77.herokuapp.com/user/addexpense",
         payload,
         {
           headers: {
