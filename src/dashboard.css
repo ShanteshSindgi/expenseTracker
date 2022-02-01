@@ -1,0 +1,17 @@
+.con {
+    position: relative;
+    border: 3px solid green;
+    top:50%;
+  }
+  
+  .vert {
+    display: flex;
+align-items: center;
+justify-content: center;
+  
+  }
+  .card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
