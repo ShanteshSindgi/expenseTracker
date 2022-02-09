@@ -147,13 +147,7 @@ export const AddExpenseModel = (props) => {
               : creditedArray.map((e) => {
                   return <option value={e.value}>{e.name}</option>;
                 })}
-            {/* <option value="Other">Kuta udavla</option>
-          <option value="Food">Food</option>
-          <option value="Shopping">Shopping</option>
-          <option value="Paid to Friend">Friend la dilo</option>
-          <option value="Money Lost">Haravle Paise</option>
-          <option value="Investment">Investment Vroo</option>
-          <option value="Other">Other</option>  */}
+          
           </Form.Select>
           <br></br>
           <FloatingLabel

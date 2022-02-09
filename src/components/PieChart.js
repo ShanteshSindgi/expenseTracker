@@ -12,7 +12,7 @@ export const Piechart = ({ data }) => {
             animationDuration={500}
             animationEasing="ease-out"
             data={data}
-            label={({ dataEntry }) => Math.round(dataEntry.percentage) + '%'}
+            label={({ dataEntry }) =>dataEntry.title + " " + Math.round(dataEntry.percentage) + '%'}
             labelStyle={defaultLabelStyle}
           
         />
