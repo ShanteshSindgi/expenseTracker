@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Login } from "././components/Login";
 // import required react-datepicker styling file
@@ -29,7 +28,6 @@ function App() {
             >
               {/* <img
                 alt=""
-                src="/logo.svg"
                 width="30"
                 height="30"
                 className="d-inline-block align-top"
