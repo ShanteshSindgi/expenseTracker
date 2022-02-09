@@ -1,12 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Login } from "./Login";
+import { Login } from "././components/Login";
 // import required react-datepicker styling file
 import "react-datepicker/dist/react-datepicker.css";
 import { Navbar, Container } from "react-bootstrap";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Dashboard } from "./Dashboard";
-import { Records } from "./records";
+import { Dashboard } from "././components/Dashboard";
+import { Records } from "././components/records";
 import { useNavigate } from "react-router-dom";
 import { PrivateRoute } from "./PrivateRoute";
 import { GetToken } from "./GetToken";
@@ -17,8 +17,9 @@ function App() {
     <>
       <div className="App" id="App">
         <Navbar bg="dark" variant="dark">
-          <Container>
+          <Container >
             <Navbar.Brand
+              style={{ cursor: 'pointer' }}
               onClick={() => {
                 if (localStorage.getItem("token")) {
                   localStorage.removeItem("token");
@@ -46,7 +47,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={
-        !GetToken()?<Login />:<Dashboard/>
+          !GetToken() ? <Login /> : <Dashboard />
         }>
         </Route>
 
